@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * main - writes to the stderr using
+ * main - writes to the std::cout
  * description: the program writes to stderr.
  * return: value 1 on success.
  */
