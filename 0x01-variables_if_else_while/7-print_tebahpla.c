@@ -1,18 +1,17 @@
 #include <stdio.h>
-
 /**
- *main - Start of program execution
- *Return: 0(Success)
-*/
+ *main - Entry point
+ *Description: print lowercase alphabet backwards
+ *Return: 0
+ */
 int main(void)
 {
-	char num;
-	char hex;
+	char c;
 
-	for (num = '0'; num <= '9'; num++)
-		putchar(num);
-	for (hex = 'a'; hex <= 'f'; hex++)
-	putchar(hex);
+	for (c = 'z'; c >= 'a'; --c)
+	putchar(c);
+
 	putchar('\n');
+
 	return (0);
 }
