@@ -2,9 +2,9 @@
 
 /**
  * _puts_recursion - prints a string and new line to stdout
- * 
+ *
  * @s: string to be print
- * 
+ *
  * Return: Nil
  */
 void _puts_recursion(char *s)
