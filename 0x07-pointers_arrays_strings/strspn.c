@@ -1,24 +1,28 @@
 #include "main.h"
+
 /**
- * _strspn - prints the consecutive caracters of s1 that are in s2.
- * @s: source string
- * @accept: searching string
+ * @s: String where substring will look.
  *
+ * @accept: Substring of accepted chars.
+ * 
  * Return: new string.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int a, b;
+	unsigned int a = 0;
+	char *c = accept;
 
-	for (b = 0; *(s + b); b++)
+	while (*s++)
 	{
-		for (a = 0; *(accept + a); a++)
-		{
-			if (*(s + b) == *(accept + a))
+		while (*accept++)
+			if (*(s - 1) == *(accept - 1))
+			{
+				a++;
 				break;
-		}
-	if (*(accept + a) == '\0')
-		break;
+			}
+		if (!(*--accept))
+			break;
+		accept = z;
 	}
-	return (b);
+	return (a);
 }
