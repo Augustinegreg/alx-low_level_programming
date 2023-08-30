@@ -1,38 +1,24 @@
 #include "main.h"
-
 /**
- * _strspn - gets the length of a prefix substring
+ * _strspn - prints the consecutive caracters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
  *
- * @s: string to evaluate
- *
- * @accept: string containing the list of characters to match in s
- *
- * Return: the number of bytes in the initial segment
- *
- * of s which consist only of bytes from accept
+ * Return: new string.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int a, b, c, flag;
+	unsigned int i, j;
 
-	f = 0;
-
-	for (a = 0; s[a] != '\0'; a++)
+	for (j = 0; *(s + j); j++)
 	{
-		flag = 0;
-		for (b = 0; accept[b] != '\0'; b++)
+		for (i = 0; *(accept + i); i++)
 		{
-			if (s[a] == accept[b])
-			{
-				c++;
-				flag = 1;
-			}
+			if (*(s + j) == *(accept + i))
+				break;
 		}
-		if (flag == 0)
-		{
-			return (c);
-		}
+	if (*(accept + i) == '\0')
+		break;
 	}
-
-	return (0);
+	return (j);
 }
