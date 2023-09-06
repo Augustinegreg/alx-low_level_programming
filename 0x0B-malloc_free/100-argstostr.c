@@ -24,7 +24,7 @@ char *argstostr(int ac, char **av)
 	while (a < ac)
 	{
 		b = 0;
-		while (av[i][j])
+		while (av[a][b])
 		{
 			size++;
 			b++;
