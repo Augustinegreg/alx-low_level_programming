@@ -3,7 +3,7 @@
 /**
  * print_all - prints anything
  *
- * @format: list of argument types 
+ * @format: list of argument types
  *
  * passed to the function
  */
