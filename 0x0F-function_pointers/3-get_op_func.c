@@ -2,13 +2,15 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - Selects the correct function 
- * to perform the operation asked by the user.
+ * get_op_func - function pointer that selects the correct function to perform
  *
- * @s: The operator passed as argument.
+ * the operation asked by the user
  *
- * return: A pointer to the function corresponding 
- * to the operator given as a parameter.
+ * @s: the operator given by the user
+ *
+ * Return: pointer to the function that corresponds to the
+ *
+ * operator given as a parameter
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -22,6 +24,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 
 	int i = 0;
+
 	while (ops[i].op != NULL && *(ops[i].op) != *s)
 		i++;
 	return (ops[i].f);
