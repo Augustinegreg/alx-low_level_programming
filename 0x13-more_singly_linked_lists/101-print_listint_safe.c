@@ -16,17 +16,17 @@ size_t print_listint_safe(const listint_t *head)
 	{
 		printf("[%p] %d\n", (void *)tmpNode, tmpNode->n);
 		a = a + 1;
-		tmNode = tmpNode->next;
+		tmpNode = tmpNode->next;
 		lnkdNode = head;
 		newNode = 0;
 		while (newNode < a)
 		{
 			if (tmpNode == lnkdNode)
 			{
-				printf("-> [%p] %d\n", (void *)tmNode, tmpNode->n);
+				printf("-> [%p] %d\n", (void *)tmpNode, tmpNode->n);
 				return (a);
 			}
-			lnkd Node = lnkdNode->next;
+			lnkdNode = lnkdNode->next;
 			newNode = newNode + 1;
 		}
 		if (!head)
